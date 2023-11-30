@@ -1,0 +1,62 @@
+html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #navbar {
+    box-shadow: 0px 6px 10px #777;
+    background: #f9fbff;
+    color: #0b0b0b;
+    display: grid;
+    grid-template: 1fr / auto 1fr;
+    place-items: center;
+    height: 100px;
+    padding: 0 1em;
+  }
+  
+  #navbar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+  
+  #navbar .logo img {
+    /*
+    Notice that I've used height instead of width.
+    This has the same effect, but it's easier to
+    match the height of the navbar if the logo
+    is not a perfect square.
+    */
+    height: 100px;
+    margin-right: 0.5em;
+  }
+  
+  #navbar a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  #navbar .nav-link:hover {
+    /* color: #7a7a7a; */
+    color: #080505;
+  }
+  
+  #navbar ul {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+  }
+  
+  #navbar .nav-link {
+    margin: 0 1em;
+  }
+  #navbar li :hover{
+    text-decoration: underline;
+    /* text-shadow: #7a7a7a; */
+    font-weight: 700;
+    transition: .2s;
+    /* color: white; */
+    transition-duration: 0.3ms;
+  }

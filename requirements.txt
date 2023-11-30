@@ -1,0 +1,9 @@
+flask
+numpy
+tensorflow
+openai
+creds
+Gunicorn
+Image
+tensorflow
+scikit-learn
