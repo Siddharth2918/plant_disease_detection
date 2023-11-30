@@ -4,7 +4,7 @@ from PIL import Image
 import numpy as np
 import tensorflow as tf
 import openai
-from creds import apikey
+# from creds import apikey
 app = Flask(__name__)
 
 # openai.api_key = apikey
@@ -49,11 +49,11 @@ def upload_file():
             # Display image in Flask application web page
             uploaded_image = file.filename
 
-            dataset = tf.keras.preprocessing.image_dataset_from_directory(f"D:/B.Tech Semester 5/AI & ML Project/Dataset/{dropdown_data}", shuffle=True)
+            dataset = tf.keras.preprocessing.image_dataset_from_directory(f"G:/SEM5 Classes/CSET301- AI & ML/Plant Disease Detection/plant_disease_detection/dataset/masterData/{dropdown_data}", shuffle=True)
             class_names = dataset.class_names # type: ignore 
 
             # Process the uploaded image
-            model = tf.keras.models.load_model(f"D:/B.Tech Semester 5/AI & ML Project/models/{dropdown_data}")
+            model = tf.keras.models.load_model(f"G:/SEM5 Classes/CSET301- AI & ML/Plant Disease Detection/plant_disease_detection/models/{dropdown_data}", compile=False)
             img_array = process_image(filename)
 
             predicted_class_name = predict_image_class(img_array, model, class_names)
